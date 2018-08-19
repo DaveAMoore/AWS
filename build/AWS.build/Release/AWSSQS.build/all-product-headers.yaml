@@ -1,0 +1,48 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSSQS.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AWSSQS-Swift.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSSQS.framework/Versions/A/Headers/AWSSQS-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSSQS.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSSQS/AWSSQS.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSSQSModel.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSSQS/AWSSQSModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSSQSResources.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSSQS/AWSSQSResources.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSSQSService.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSSQS/AWSSQSService.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSSQS.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/AWS.build/Release/AWSSQS.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSCore.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AWSBolts.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Bolts/AWSBolts.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCancellationToken.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Bolts/AWSCancellationToken.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCancellationTokenRegistration.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Bolts/AWSCancellationTokenRegistration.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCancellationTokenSource.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Bolts/AWSCancellationTokenSource.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCategory.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Utility/AWSCategory.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSClientContext.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Service/AWSClientContext.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCocoaLumberjack.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Logging/AWSCocoaLumberjack.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoIdentity.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/CognitoIdentity/AWSCognitoIdentity.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoIdentityModel.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/CognitoIdentity/AWSCognitoIdentityModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoIdentityResources.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/CognitoIdentity/AWSCognitoIdentityResources.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoIdentityService.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/CognitoIdentity/AWSCognitoIdentityService.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCore-Swift.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSCore.framework/Versions/A/Headers/AWSCore-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCore.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/AWSCore.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCredentialsProvider.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Authentication/AWSCredentialsProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDDASLLogCapture.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Logging/AWSDDASLLogCapture.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDDASLLogger.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Logging/AWSDDASLLogger.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDDAssertMacros.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Logging/AWSDDAssertMacros.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDDFileLogger.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Logging/AWSDDFileLogger.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDDLog.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Logging/AWSDDLog.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDDLogMacros.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Logging/AWSDDLogMacros.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDDOSLogger.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Logging/AWSDDOSLogger.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDDTTYLogger.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Logging/AWSDDTTYLogger.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDevice.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Device/AWSDevice.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSExecutor.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Bolts/AWSExecutor.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSFMDB.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/FMDB/AWSFMDB.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSFMDatabase.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/FMDB/AWSFMDatabase.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSFMDatabaseAdditions.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/FMDB/AWSFMDatabaseAdditions.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSFMDatabasePool.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/FMDB/AWSFMDatabasePool.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSFMDatabaseQueue.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/FMDB/AWSFMDatabaseQueue.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSFMResultSet.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/FMDB/AWSFMResultSet.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSGZIP.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/GZIP/AWSGZIP.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSGeneric.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Bolts/AWSGeneric.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSIdentityProvider.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Authentication/AWSIdentityProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSInfo.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Service/AWSInfo.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSKSReachability.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/KSReachability/AWSKSReachability.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSLogging.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Utility/AWSLogging.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSMTLJSONAdapter.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Mantle/AWSMTLJSONAdapter.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSMTLManagedObjectAdapter.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Mantle/AWSMTLManagedObjectAdapter.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSMTLModel+NSCoding.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Mantle/AWSMTLModel+NSCoding.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSMTLModel.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Mantle/AWSMTLModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSMTLValueTransformer.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Mantle/AWSMTLValueTransformer.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSMantle.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Mantle/AWSMantle.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSModel.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Utility/AWSModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSNetworking.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Networking/AWSNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSSTS.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/STS/AWSSTS.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSSTSModel.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/STS/AWSSTSModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSSTSResources.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/STS/AWSSTSResources.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSSTSService.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/STS/AWSSTSService.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSSerialization.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Serialization/AWSSerialization.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSService.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Service/AWSService.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSServiceEnum.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Service/AWSServiceEnum.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSSignature.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Authentication/AWSSignature.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSSynchronizedMutableDictionary.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Utility/AWSSynchronizedMutableDictionary.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSTMCache.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/TMCache/AWSTMCache.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSTMDiskCache.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/TMCache/AWSTMDiskCache.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSTMMemoryCache.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/TMCache/AWSTMMemoryCache.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSTask.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Bolts/AWSTask.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSTaskCompletionSource.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Bolts/AWSTaskCompletionSource.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSUICKeyChainStore.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/UICKeyChainStore/AWSUICKeyChainStore.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSURLRequestRetryHandler.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Serialization/AWSURLRequestRetryHandler.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSURLRequestSerialization.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Serialization/AWSURLRequestSerialization.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSURLResponseSerialization.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Serialization/AWSURLResponseSerialization.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSURLSessionManager.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Networking/AWSURLSessionManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSValidation.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Serialization/AWSValidation.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSArray+AWSMTLManipulationAdditions.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Mantle/NSArray+AWSMTLManipulationAdditions.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSDictionary+AWSMTLManipulationAdditions.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Mantle/NSDictionary+AWSMTLManipulationAdditions.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSObject+AWSMTLComparisonAdditions.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Mantle/NSObject+AWSMTLComparisonAdditions.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSValueTransformer+AWSMTLInversionAdditions.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Mantle/NSValueTransformer+AWSMTLInversionAdditions.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSValueTransformer+AWSMTLPredefinedTransformerAdditions.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCore/Mantle/NSValueTransformer+AWSMTLPredefinedTransformerAdditions.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSCore.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/AWS.build/Release/AWSCore.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

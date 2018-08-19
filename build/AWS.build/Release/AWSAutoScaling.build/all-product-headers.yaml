@@ -1,0 +1,48 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSAutoScaling.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AWSAutoScaling-Swift.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSAutoScaling.framework/Versions/A/Headers/AWSAutoScaling-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSAutoScaling.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSAutoScaling/AWSAutoScaling.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSAutoScalingModel.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSAutoScaling/AWSAutoScalingModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSAutoScalingResources.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSAutoScaling/AWSAutoScalingResources.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSAutoScalingService.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSAutoScaling/AWSAutoScalingService.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSAutoScaling.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/AWS.build/Release/AWSAutoScaling.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSCognitoIdentityProviderASF.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AWSCognitoIdentityProviderASF-Swift.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSCognitoIdentityProviderASF.framework/Versions/A/Headers/AWSCognitoIdentityProviderASF-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoIdentityProviderASF.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSCognitoIdentityProviderASF.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/AWS.build/Release/AWSCognitoIdentityProviderASF.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

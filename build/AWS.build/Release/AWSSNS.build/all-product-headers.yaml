@@ -1,0 +1,48 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSSNS.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AWSSNS-Swift.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSSNS.framework/Versions/A/Headers/AWSSNS-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSSNS.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSSNS/AWSSNS.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSSNSModel.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSSNS/AWSSNSModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSSNSResources.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSSNS/AWSSNSResources.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSSNSService.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSSNS/AWSSNSService.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSSNS.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/AWS.build/Release/AWSSNS.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

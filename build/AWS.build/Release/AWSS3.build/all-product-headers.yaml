@@ -1,0 +1,63 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSS3.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AWSS3-Swift.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSS3.framework/Versions/A/Headers/AWSS3-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSS3/AWSS3.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3Model.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/aws-sdk-ios-master/AWSS3/AWSS3Model.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3PreSignedURL.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSS3/AWSS3PreSignedURL.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3Resources.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSS3/AWSS3Resources.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3Service.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSS3/AWSS3Service.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3TransferManager.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSS3/AWSS3TransferManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3TransferUtility.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSS3/AWSS3TransferUtility.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSS3.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/AWS.build/Release/AWSS3.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSCognitoIdentityProvider.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AWSCognitoIdentityProvider-Swift.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSCognitoIdentityProvider.framework/Versions/A/Headers/AWSCognitoIdentityProvider-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoIdentityProvider.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoIdentityProviderModel.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCognitoIdentityProvider/AWSCognitoIdentityProviderModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoIdentityProviderResources.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCognitoIdentityProvider/AWSCognitoIdentityProviderResources.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoIdentityProviderService.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCognitoIdentityProvider/AWSCognitoIdentityProviderService.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoIdentityUser.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCognitoIdentityProvider/AWSCognitoIdentityUser.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoIdentityUserPool.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCognitoIdentityProvider/AWSCognitoIdentityUserPool.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSCognitoIdentityProvider.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/AWS.build/Release/AWSCognitoIdentityProvider.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSCognito.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AWSCognito-Swift.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSCognito.framework/Versions/A/Headers/AWSCognito-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognito.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCognito/AWSCognito.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoConflict.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCognito/AWSCognitoConflict.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoDataset.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCognito/AWSCognitoDataset.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoHandlers.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCognito/AWSCognitoHandlers.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoRecord.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCognito/AWSCognitoRecord.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoService.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCognito/AWSCognitoService.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoSyncService.h",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/AWSCognito/CognitoSync/AWSCognitoSyncService.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/Release/AWSCognito.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Volumes/Macintosh HD/Users/David/Development/Resolution-Files/AWS/build/AWS.build/Release/AWSCognito.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}
