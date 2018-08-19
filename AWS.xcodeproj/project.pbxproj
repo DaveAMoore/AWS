@@ -229,6 +229,34 @@
 		63139BCC20C7672600A62072 /* AWSCognitoIdentityProviderASF.m in Sources */ = {isa = PBXBuildFile; fileRef = 63139BCA20C7672600A62072 /* AWSCognitoIdentityProviderASF.m */; };
 		63139BD120C7673000A62072 /* libAWSCognitoIdentityProviderASFBinary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63139BCF20C7673000A62072 /* libAWSCognitoIdentityProviderASFBinary.a */; };
 		63139BD220C7673000A62072 /* AWSCognitoIdentityASF.h in Headers */ = {isa = PBXBuildFile; fileRef = 63139BD020C7673000A62072 /* AWSCognitoIdentityASF.h */; };
+		6325626D212A2C36001CC6FA /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63256264212A2C36001CC6FA /* AWSDynamoDB.framework */; };
+		63256272212A2C36001CC6FA /* AWSDynamoDBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63256271212A2C36001CC6FA /* AWSDynamoDBTests.m */; };
+		63256274212A2C36001CC6FA /* AWSDynamoDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 63256266212A2C36001CC6FA /* AWSDynamoDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63256289212A2C6F001CC6FA /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63256280212A2C6E001CC6FA /* AWSDynamoDB.framework */; };
+		63256297212A2C96001CC6FA /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B828D12129C044002924AD /* AWSCore.framework */; };
+		63256298212A2CB7001CC6FA /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637BC24720C7582600038F97 /* AWSCore.framework */; };
+		63256299212A2CE7001CC6FA /* AWSDynamoDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 63256266212A2C36001CC6FA /* AWSDynamoDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6325629B212A2CEE001CC6FA /* AWSDynamoDBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63256271212A2C36001CC6FA /* AWSDynamoDBTests.m */; };
+		632562A6212A2D2E001CC6FA /* AWSDynamoDBRequestRetryHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 6325629C212A2D2C001CC6FA /* AWSDynamoDBRequestRetryHandler.h */; };
+		632562A7212A2D2E001CC6FA /* AWSDynamoDBRequestRetryHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 6325629C212A2D2C001CC6FA /* AWSDynamoDBRequestRetryHandler.h */; };
+		632562A8212A2D2E001CC6FA /* AWSDynamoDBObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6325629D212A2D2C001CC6FA /* AWSDynamoDBObjectMapper.m */; };
+		632562A9212A2D2E001CC6FA /* AWSDynamoDBObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6325629D212A2D2C001CC6FA /* AWSDynamoDBObjectMapper.m */; };
+		632562AA212A2D2E001CC6FA /* AWSDynamoDBRequestRetryHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6325629E212A2D2C001CC6FA /* AWSDynamoDBRequestRetryHandler.m */; };
+		632562AB212A2D2E001CC6FA /* AWSDynamoDBRequestRetryHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6325629E212A2D2C001CC6FA /* AWSDynamoDBRequestRetryHandler.m */; };
+		632562AC212A2D2E001CC6FA /* AWSDynamoDBService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6325629F212A2D2D001CC6FA /* AWSDynamoDBService.h */; };
+		632562AD212A2D2E001CC6FA /* AWSDynamoDBService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6325629F212A2D2D001CC6FA /* AWSDynamoDBService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		632562AE212A2D2E001CC6FA /* AWSDynamoDBService.m in Sources */ = {isa = PBXBuildFile; fileRef = 632562A0212A2D2D001CC6FA /* AWSDynamoDBService.m */; };
+		632562AF212A2D2E001CC6FA /* AWSDynamoDBService.m in Sources */ = {isa = PBXBuildFile; fileRef = 632562A0212A2D2D001CC6FA /* AWSDynamoDBService.m */; };
+		632562B0212A2D2E001CC6FA /* AWSDynamoDBResources.h in Headers */ = {isa = PBXBuildFile; fileRef = 632562A1212A2D2D001CC6FA /* AWSDynamoDBResources.h */; };
+		632562B1212A2D2E001CC6FA /* AWSDynamoDBResources.h in Headers */ = {isa = PBXBuildFile; fileRef = 632562A1212A2D2D001CC6FA /* AWSDynamoDBResources.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		632562B2212A2D2E001CC6FA /* AWSDynamoDBObjectMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 632562A2212A2D2D001CC6FA /* AWSDynamoDBObjectMapper.h */; };
+		632562B3212A2D2E001CC6FA /* AWSDynamoDBObjectMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 632562A2212A2D2D001CC6FA /* AWSDynamoDBObjectMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		632562B4212A2D2E001CC6FA /* AWSDynamoDBModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 632562A3212A2D2D001CC6FA /* AWSDynamoDBModel.h */; };
+		632562B5212A2D2E001CC6FA /* AWSDynamoDBModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 632562A3212A2D2D001CC6FA /* AWSDynamoDBModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		632562B6212A2D2E001CC6FA /* AWSDynamoDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 632562A4212A2D2D001CC6FA /* AWSDynamoDBModel.m */; };
+		632562B7212A2D2E001CC6FA /* AWSDynamoDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 632562A4212A2D2D001CC6FA /* AWSDynamoDBModel.m */; };
+		632562B8212A2D2E001CC6FA /* AWSDynamoDBResources.m in Sources */ = {isa = PBXBuildFile; fileRef = 632562A5212A2D2E001CC6FA /* AWSDynamoDBResources.m */; };
+		632562B9212A2D2E001CC6FA /* AWSDynamoDBResources.m in Sources */ = {isa = PBXBuildFile; fileRef = 632562A5212A2D2E001CC6FA /* AWSDynamoDBResources.m */; };
 		632FC27420C76C320083A946 /* AWSS3Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 632FC27020C76C320083A946 /* AWSS3Service.m */; };
 		632FC27520C76C320083A946 /* AWSS3Service.h in Headers */ = {isa = PBXBuildFile; fileRef = 632FC27120C76C320083A946 /* AWSS3Service.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		632FC27620C76C320083A946 /* AWSS3TransferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 632FC27220C76C320083A946 /* AWSS3TransferManager.m */; };
@@ -554,6 +582,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6325626E212A2C36001CC6FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 637BC21620C757FC00038F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63256263212A2C36001CC6FA;
+			remoteInfo = AWSDynamoDB;
+		};
+		6325628A212A2C6F001CC6FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 637BC21620C757FC00038F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6325627F212A2C6E001CC6FA;
+			remoteInfo = AWSDynamoDB_iOS;
+		};
 		637BC25120C7582600038F97 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 637BC21620C757FC00038F97 /* Project object */;
@@ -897,6 +939,24 @@
 		63139BCA20C7672600A62072 /* AWSCognitoIdentityProviderASF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSCognitoIdentityProviderASF.m; sourceTree = "<group>"; };
 		63139BCF20C7673000A62072 /* libAWSCognitoIdentityProviderASFBinary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAWSCognitoIdentityProviderASFBinary.a; sourceTree = "<group>"; };
 		63139BD020C7673000A62072 /* AWSCognitoIdentityASF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSCognitoIdentityASF.h; sourceTree = "<group>"; };
+		63256264212A2C36001CC6FA /* AWSDynamoDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSDynamoDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63256266212A2C36001CC6FA /* AWSDynamoDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSDynamoDB.h; sourceTree = "<group>"; };
+		63256267212A2C36001CC6FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6325626C212A2C36001CC6FA /* AWSDynamoDB_OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWSDynamoDB_OSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63256271212A2C36001CC6FA /* AWSDynamoDBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSDynamoDBTests.m; sourceTree = "<group>"; };
+		63256273212A2C36001CC6FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63256280212A2C6E001CC6FA /* AWSDynamoDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSDynamoDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63256288212A2C6E001CC6FA /* AWSDynamoDB_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWSDynamoDB_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6325629C212A2D2C001CC6FA /* AWSDynamoDBRequestRetryHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSDynamoDBRequestRetryHandler.h; sourceTree = "<group>"; };
+		6325629D212A2D2C001CC6FA /* AWSDynamoDBObjectMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSDynamoDBObjectMapper.m; sourceTree = "<group>"; };
+		6325629E212A2D2C001CC6FA /* AWSDynamoDBRequestRetryHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSDynamoDBRequestRetryHandler.m; sourceTree = "<group>"; };
+		6325629F212A2D2D001CC6FA /* AWSDynamoDBService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSDynamoDBService.h; sourceTree = "<group>"; };
+		632562A0212A2D2D001CC6FA /* AWSDynamoDBService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSDynamoDBService.m; sourceTree = "<group>"; };
+		632562A1212A2D2D001CC6FA /* AWSDynamoDBResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSDynamoDBResources.h; sourceTree = "<group>"; };
+		632562A2212A2D2D001CC6FA /* AWSDynamoDBObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSDynamoDBObjectMapper.h; sourceTree = "<group>"; };
+		632562A3212A2D2D001CC6FA /* AWSDynamoDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSDynamoDBModel.h; sourceTree = "<group>"; };
+		632562A4212A2D2D001CC6FA /* AWSDynamoDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSDynamoDBModel.m; sourceTree = "<group>"; };
+		632562A5212A2D2E001CC6FA /* AWSDynamoDBResources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSDynamoDBResources.m; sourceTree = "<group>"; };
 		632FC27020C76C320083A946 /* AWSS3Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSS3Service.m; sourceTree = "<group>"; };
 		632FC27120C76C320083A946 /* AWSS3Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSS3Service.h; sourceTree = "<group>"; };
 		632FC27220C76C320083A946 /* AWSS3TransferManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSS3TransferManager.m; sourceTree = "<group>"; };
@@ -994,6 +1054,38 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		63256261212A2C36001CC6FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63256298212A2CB7001CC6FA /* AWSCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63256269212A2C36001CC6FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6325626D212A2C36001CC6FA /* AWSDynamoDB.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6325627D212A2C6E001CC6FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63256297212A2C96001CC6FA /* AWSCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63256285212A2C6E001CC6FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63256289212A2C6F001CC6FA /* AWSDynamoDB.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		637BC24420C7582600038F97 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1675,6 +1767,34 @@
 			path = Internal;
 			sourceTree = "<group>";
 		};
+		63256265212A2C36001CC6FA /* AWSDynamoDB */ = {
+			isa = PBXGroup;
+			children = (
+				63256266212A2C36001CC6FA /* AWSDynamoDB.h */,
+				632562A3212A2D2D001CC6FA /* AWSDynamoDBModel.h */,
+				632562A4212A2D2D001CC6FA /* AWSDynamoDBModel.m */,
+				632562A2212A2D2D001CC6FA /* AWSDynamoDBObjectMapper.h */,
+				6325629D212A2D2C001CC6FA /* AWSDynamoDBObjectMapper.m */,
+				632562A1212A2D2D001CC6FA /* AWSDynamoDBResources.h */,
+				632562A5212A2D2E001CC6FA /* AWSDynamoDBResources.m */,
+				6325629F212A2D2D001CC6FA /* AWSDynamoDBService.h */,
+				632562A0212A2D2D001CC6FA /* AWSDynamoDBService.m */,
+				6325629C212A2D2C001CC6FA /* AWSDynamoDBRequestRetryHandler.h */,
+				6325629E212A2D2C001CC6FA /* AWSDynamoDBRequestRetryHandler.m */,
+				63256267212A2C36001CC6FA /* Info.plist */,
+			);
+			path = AWSDynamoDB;
+			sourceTree = "<group>";
+		};
+		63256270212A2C36001CC6FA /* AWSDynamoDBTests */ = {
+			isa = PBXGroup;
+			children = (
+				63256271212A2C36001CC6FA /* AWSDynamoDBTests.m */,
+				63256273212A2C36001CC6FA /* Info.plist */,
+			);
+			path = AWSDynamoDBTests;
+			sourceTree = "<group>";
+		};
 		637BC21520C757FC00038F97 = {
 			isa = PBXGroup;
 			children = (
@@ -1694,6 +1814,8 @@
 				637BC2FB20C758DF00038F97 /* AWSSNSTests */,
 				637BC30C20C758E800038F97 /* AWSSQS */,
 				637BC31720C758E800038F97 /* AWSSQSTests */,
+				63256265212A2C36001CC6FA /* AWSDynamoDB */,
+				63256270212A2C36001CC6FA /* AWSDynamoDBTests */,
 				637BC22020C757FC00038F97 /* Products */,
 				63139B5720C762B000A62072 /* Frameworks */,
 			);
@@ -1734,6 +1856,10 @@
 				63B82A7C2129CA17002924AD /* AWSSNS_iOSTests.xctest */,
 				63B82A992129CBF7002924AD /* AWSSQS.framework */,
 				63B82AA12129CBF7002924AD /* AWSSQS_iOSTests.xctest */,
+				63256264212A2C36001CC6FA /* AWSDynamoDB.framework */,
+				6325626C212A2C36001CC6FA /* AWSDynamoDB_OSXTests.xctest */,
+				63256280212A2C6E001CC6FA /* AWSDynamoDB.framework */,
+				63256288212A2C6E001CC6FA /* AWSDynamoDB_iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1960,6 +2086,32 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		6325625F212A2C36001CC6FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632562B0212A2D2E001CC6FA /* AWSDynamoDBResources.h in Headers */,
+				632562A6212A2D2E001CC6FA /* AWSDynamoDBRequestRetryHandler.h in Headers */,
+				632562AC212A2D2E001CC6FA /* AWSDynamoDBService.h in Headers */,
+				632562B2212A2D2E001CC6FA /* AWSDynamoDBObjectMapper.h in Headers */,
+				632562B4212A2D2E001CC6FA /* AWSDynamoDBModel.h in Headers */,
+				63256274212A2C36001CC6FA /* AWSDynamoDB.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6325627B212A2C6E001CC6FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632562B1212A2D2E001CC6FA /* AWSDynamoDBResources.h in Headers */,
+				632562A7212A2D2E001CC6FA /* AWSDynamoDBRequestRetryHandler.h in Headers */,
+				632562AD212A2D2E001CC6FA /* AWSDynamoDBService.h in Headers */,
+				632562B3212A2D2E001CC6FA /* AWSDynamoDBObjectMapper.h in Headers */,
+				632562B5212A2D2E001CC6FA /* AWSDynamoDBModel.h in Headers */,
+				63256299212A2CE7001CC6FA /* AWSDynamoDB.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		637BC24220C7582600038F97 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2359,6 +2511,78 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		63256263212A2C36001CC6FA /* AWSDynamoDB_OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63256279212A2C36001CC6FA /* Build configuration list for PBXNativeTarget "AWSDynamoDB_OSX" */;
+			buildPhases = (
+				6325625F212A2C36001CC6FA /* Headers */,
+				63256260212A2C36001CC6FA /* Sources */,
+				63256261212A2C36001CC6FA /* Frameworks */,
+				63256262212A2C36001CC6FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AWSDynamoDB_OSX;
+			productName = AWSDynamoDB;
+			productReference = 63256264212A2C36001CC6FA /* AWSDynamoDB.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6325626B212A2C36001CC6FA /* AWSDynamoDB_OSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6325627A212A2C36001CC6FA /* Build configuration list for PBXNativeTarget "AWSDynamoDB_OSXTests" */;
+			buildPhases = (
+				63256268212A2C36001CC6FA /* Sources */,
+				63256269212A2C36001CC6FA /* Frameworks */,
+				6325626A212A2C36001CC6FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6325626F212A2C36001CC6FA /* PBXTargetDependency */,
+			);
+			name = AWSDynamoDB_OSXTests;
+			productName = AWSDynamoDBTests;
+			productReference = 6325626C212A2C36001CC6FA /* AWSDynamoDB_OSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6325627F212A2C6E001CC6FA /* AWSDynamoDB_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63256291212A2C6F001CC6FA /* Build configuration list for PBXNativeTarget "AWSDynamoDB_iOS" */;
+			buildPhases = (
+				6325627B212A2C6E001CC6FA /* Headers */,
+				6325627C212A2C6E001CC6FA /* Sources */,
+				6325627D212A2C6E001CC6FA /* Frameworks */,
+				6325627E212A2C6E001CC6FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AWSDynamoDB_iOS;
+			productName = AWSDynamoDB_iOS;
+			productReference = 63256280212A2C6E001CC6FA /* AWSDynamoDB.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		63256287212A2C6E001CC6FA /* AWSDynamoDB_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63256294212A2C6F001CC6FA /* Build configuration list for PBXNativeTarget "AWSDynamoDB_iOSTests" */;
+			buildPhases = (
+				63256284212A2C6E001CC6FA /* Sources */,
+				63256285212A2C6E001CC6FA /* Frameworks */,
+				63256286212A2C6E001CC6FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6325628B212A2C6F001CC6FA /* PBXTargetDependency */,
+			);
+			name = AWSDynamoDB_iOSTests;
+			productName = AWSDynamoDB_iOSTests;
+			productReference = 63256288212A2C6E001CC6FA /* AWSDynamoDB_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		637BC24620C7582600038F97 /* AWSCore_OSX */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 637BC25820C7582600038F97 /* Build configuration list for PBXNativeTarget "AWSCore_OSX" */;
@@ -2945,6 +3169,18 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Moore Development";
 				TargetAttributes = {
+					63256263212A2C36001CC6FA = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					6325626B212A2C36001CC6FA = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					6325627F212A2C6E001CC6FA = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					63256287212A2C6E001CC6FA = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					637BC24620C7582600038F97 = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -3071,6 +3307,8 @@
 				637BC2F620C758DF00038F97 /* AWSSNS_OSXTests */,
 				637BC30A20C758E800038F97 /* AWSSQS_OSX */,
 				637BC31220C758E800038F97 /* AWSSQS_OSXTests */,
+				63256263212A2C36001CC6FA /* AWSDynamoDB_OSX */,
+				6325626B212A2C36001CC6FA /* AWSDynamoDB_OSXTests */,
 				63B828D02129C044002924AD /* AWSCore_iOS */,
 				63B828D82129C044002924AD /* AWSCore_iOSTests */,
 				63B829892129C610002924AD /* AWSAutoScaling_iOS */,
@@ -3087,11 +3325,41 @@
 				63B82A7B2129CA17002924AD /* AWSSNS_iOSTests */,
 				63B82A982129CBF7002924AD /* AWSSQS_iOS */,
 				63B82AA02129CBF7002924AD /* AWSSQS_iOSTests */,
+				6325627F212A2C6E001CC6FA /* AWSDynamoDB_iOS */,
+				63256287212A2C6E001CC6FA /* AWSDynamoDB_iOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		63256262212A2C36001CC6FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6325626A212A2C36001CC6FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6325627E212A2C6E001CC6FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63256286212A2C6E001CC6FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		637BC24520C7582600038F97 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3319,6 +3587,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		63256260212A2C36001CC6FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632562B8212A2D2E001CC6FA /* AWSDynamoDBResources.m in Sources */,
+				632562AA212A2D2E001CC6FA /* AWSDynamoDBRequestRetryHandler.m in Sources */,
+				632562A8212A2D2E001CC6FA /* AWSDynamoDBObjectMapper.m in Sources */,
+				632562AE212A2D2E001CC6FA /* AWSDynamoDBService.m in Sources */,
+				632562B6212A2D2E001CC6FA /* AWSDynamoDBModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63256268212A2C36001CC6FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63256272212A2C36001CC6FA /* AWSDynamoDBTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6325627C212A2C6E001CC6FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632562B9212A2D2E001CC6FA /* AWSDynamoDBResources.m in Sources */,
+				632562AB212A2D2E001CC6FA /* AWSDynamoDBRequestRetryHandler.m in Sources */,
+				632562A9212A2D2E001CC6FA /* AWSDynamoDBObjectMapper.m in Sources */,
+				632562AF212A2D2E001CC6FA /* AWSDynamoDBService.m in Sources */,
+				632562B7212A2D2E001CC6FA /* AWSDynamoDBModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63256284212A2C6E001CC6FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6325629B212A2CEE001CC6FA /* AWSDynamoDBTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		637BC24320C7582600038F97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3774,6 +4082,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6325626F212A2C36001CC6FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63256263212A2C36001CC6FA /* AWSDynamoDB_OSX */;
+			targetProxy = 6325626E212A2C36001CC6FA /* PBXContainerItemProxy */;
+		};
+		6325628B212A2C6F001CC6FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6325627F212A2C6E001CC6FA /* AWSDynamoDB_iOS */;
+			targetProxy = 6325628A212A2C6F001CC6FA /* PBXContainerItemProxy */;
+		};
 		637BC25220C7582600038F97 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 637BC24620C7582600038F97 /* AWSCore_OSX */;
@@ -3857,6 +4175,200 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		63256275212A2C36001CC6FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4SPJ9K7CHQ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = AWSDynamoDB/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.mooredev.AWSDynamoDB;
+				PRODUCT_NAME = AWSDynamoDB;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		63256276212A2C36001CC6FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4SPJ9K7CHQ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = AWSDynamoDB/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.mooredev.AWSDynamoDB;
+				PRODUCT_NAME = AWSDynamoDB;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		63256277212A2C36001CC6FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4SPJ9K7CHQ;
+				INFOPLIST_FILE = AWSDynamoDBTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.mooredev.AWSDynamoDBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		63256278212A2C36001CC6FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4SPJ9K7CHQ;
+				INFOPLIST_FILE = AWSDynamoDBTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.mooredev.AWSDynamoDBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		63256292212A2C6F001CC6FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4SPJ9K7CHQ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AWSDynamoDB/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.mooredev.AWSDynamoDB;
+				PRODUCT_NAME = AWSDynamoDB;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63256293212A2C6F001CC6FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4SPJ9K7CHQ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AWSDynamoDB/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.mooredev.AWSDynamoDB;
+				PRODUCT_NAME = AWSDynamoDB;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63256295212A2C6F001CC6FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SPJ9K7CHQ;
+				INFOPLIST_FILE = AWSDynamoDBTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.mooredev.AWSDynamoDBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63256296212A2C6F001CC6FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SPJ9K7CHQ;
+				INFOPLIST_FILE = AWSDynamoDBTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.mooredev.AWSDynamoDBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		637BC23120C757FC00038F97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -5501,6 +6013,42 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		63256279212A2C36001CC6FA /* Build configuration list for PBXNativeTarget "AWSDynamoDB_OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63256275212A2C36001CC6FA /* Debug */,
+				63256276212A2C36001CC6FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6325627A212A2C36001CC6FA /* Build configuration list for PBXNativeTarget "AWSDynamoDB_OSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63256277212A2C36001CC6FA /* Debug */,
+				63256278212A2C36001CC6FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63256291212A2C6F001CC6FA /* Build configuration list for PBXNativeTarget "AWSDynamoDB_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63256292212A2C6F001CC6FA /* Debug */,
+				63256293212A2C6F001CC6FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63256294212A2C6F001CC6FA /* Build configuration list for PBXNativeTarget "AWSDynamoDB_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63256295212A2C6F001CC6FA /* Debug */,
+				63256296212A2C6F001CC6FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		637BC21920C757FC00038F97 /* Build configuration list for PBXProject "AWS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
