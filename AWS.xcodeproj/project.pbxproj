@@ -1051,6 +1051,7 @@
 		63B82A7C2129CA17002924AD /* AWSSNS_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWSSNS_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B82A992129CBF7002924AD /* AWSSQS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSSQS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B82AA12129CBF7002924AD /* AWSSQS_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWSSQS_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63B82D6E212A308C002924AD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1798,6 +1799,7 @@
 		637BC21520C757FC00038F97 = {
 			isa = PBXGroup;
 			children = (
+				63B82D6E212A308C002924AD /* README.md */,
 				637BC24820C7582600038F97 /* AWSCore */,
 				637BC25320C7582600038F97 /* AWSCoreTests */,
 				637BC26420C7585F00038F97 /* AWSAutoScaling */,
