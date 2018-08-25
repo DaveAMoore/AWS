@@ -215,6 +215,10 @@ typedef NS_ENUM(NSInteger, AWSDynamoDBTableStatus) {
  */
 @interface AWSDynamoDBAttributeValue : AWSModel
 
+/**
+ <p>Creates and returnsa new attribute value with a particular string.<p>
+ */
+- (instancetype)initWithString:(NSString *)s;
 
 /**
  <p>A Binary data type.</p>
