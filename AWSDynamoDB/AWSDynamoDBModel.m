@@ -712,6 +712,14 @@ NSString *const AWSDynamoDBErrorDomain = @"com.amazonaws.AWSDynamoDBErrorDomain"
 
 @implementation AWSDynamoDBDeleteRequest
 
+- (instancetype)initWithKey:(NSDictionary<NSString *,AWSDynamoDBAttributeValue *> *)key {
+    self = [super init];
+    if (self) {
+        self.key = key;
+    }
+    return self;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"key" : @"Key",
@@ -1466,6 +1474,14 @@ NSString *const AWSDynamoDBErrorDomain = @"com.amazonaws.AWSDynamoDBErrorDomain"
 
 @implementation AWSDynamoDBPutRequest
 
+- (instancetype)initWithItem:(NSDictionary<NSString *,AWSDynamoDBAttributeValue *> *)item {
+    self = [super init];
+    if (self) {
+        self.item = item;
+    }
+    return self;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"item" : @"Item",
@@ -2186,6 +2202,22 @@ NSString *const AWSDynamoDBErrorDomain = @"com.amazonaws.AWSDynamoDBErrorDomain"
 @end
 
 @implementation AWSDynamoDBWriteRequest
+
+- (instancetype)initWithPutRequest:(AWSDynamoDBPutRequest *)putRequest {
+    self = [super self];
+    if (self) {
+        self.putRequest = putRequest;
+    }
+    return self;
+}
+
+- (instancetype)initWithDeleteRequest:(AWSDynamoDBDeleteRequest *)deleteRequest {
+    self = [super self];
+    if (self) {
+        self.deleteRequest = deleteRequest;
+    }
+    return self;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{

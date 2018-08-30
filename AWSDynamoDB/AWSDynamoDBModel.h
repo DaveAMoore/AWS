@@ -632,6 +632,7 @@ typedef NS_ENUM(NSInteger, AWSDynamoDBTableStatus) {
  */
 @interface AWSDynamoDBDeleteRequest : AWSModel
 
+- (instancetype)initWithKey:(NSDictionary<NSString *, AWSDynamoDBAttributeValue *> *)key;
 
 /**
  <p>A map of attribute name to attribute values, representing the primary key of the item to delete. All of the table's primary key attributes must be specified, and their data types must match those of the table's key schema.</p>
@@ -1252,6 +1253,7 @@ typedef NS_ENUM(NSInteger, AWSDynamoDBTableStatus) {
  */
 @interface AWSDynamoDBPutRequest : AWSModel
 
+- (instancetype)initWithItem:(NSDictionary<NSString *, AWSDynamoDBAttributeValue *> *)item NS_DESIGNATED_INITIALIZER;
 
 /**
  <p>A map of attribute name to attribute values, representing the primary key of an item to be processed by <i>PutItem</i>. All of the table's primary key attributes must be specified, and their data types must match those of the table's key schema. If any attributes are present in the item which are part of an index key schema for the table, their types must match the index key schema.</p>
@@ -1768,6 +1770,8 @@ typedef NS_ENUM(NSInteger, AWSDynamoDBTableStatus) {
  */
 @interface AWSDynamoDBWriteRequest : AWSModel
 
+- (instancetype)initWithPutRequest:(AWSDynamoDBPutRequest *)putRequest;
+- (instancetype)initWithDeleteRequest:(AWSDynamoDBDeleteRequest *)deleteRequest;
 
 /**
  <p>A request to perform a <i>DeleteItem</i> operation.</p>
