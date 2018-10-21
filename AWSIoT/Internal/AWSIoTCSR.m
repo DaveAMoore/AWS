@@ -80,10 +80,33 @@ unsigned char setTag = 0x31;
     
     unsigned char sig[256];
     size_t sigLen = sizeof(sig);
+#if TARGET_OS_OSX && !TARGET_OS_IPHONE
+    CFErrorRef error = nil;
+    SecTransformRef transformRef = SecSignTransformCreate(privateKeyRef, &error);
+    if (error) { return nil; }
+    
+    SecTransformSetAttribute(transformRef, kSecPaddingKey, kSecPaddingPKCS1Key, &error);
+    size_t _size = sizeof(SHA1Digest);
+    CFNumberRef size = CFNumberCreate(nil, kCFNumberIntType, &_size);
+    SecTransformSetAttribute(transformRef, kSecDigestLengthAttribute, size, &error);
+    SecTransformSetAttribute(transformRef, kSecTransformInputAttributeName, SHA1Digest, &error);
+    if (error) { return nil; }
+    
+    CFDataRef signature = SecTransformExecute(transformRef, &error);
+    if (error || !signature) { return nil; }
+    
+    sigLen = CFDataGetLength(signature);
+    CFDataGetBytes(signature, CFRangeMake(0, sigLen), (UInt8 *)&sig);
+    
+    CFRelease(transformRef);
+    CFRelease(size);
+    CFRelease(signature);
+#else
     OSStatus sanityCheck = SecKeyRawSign(privateKeyRef, kSecPaddingPKCS1SHA1, SHA1Digest, sizeof(SHA1Digest), sig, &sigLen);
     if (sanityCheck != noErr) {
         return nil;
     }
+#endif
     
     NSMutableData * scr = [[NSMutableData alloc] initWithData:certRequestData];
     unsigned char tag[] = {0x30, 0x0D, 0x06, 0x09, 0x2A, 0x86, 0x48, 0x86, 0xF7, 0x0D, 1, 1, 5, 0x05, 0x00};
