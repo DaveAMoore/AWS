@@ -6,7 +6,7 @@
 //  Copyright © 2018 Moore Development. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for AWSCognito.
 FOUNDATION_EXPORT double AWSCognitoVersionNumber;
