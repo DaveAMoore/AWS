@@ -715,9 +715,11 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
     _internalCredentials = internalCredentials;
 
     /// Temporary fix for blocking SecItemDelete call.
+    #if TARGET_OS_OSX && !TARGET_OS_IPHONE
     if (!internalCredentials) {
         return;
     }
+    #endif
     
     self.keychain[AWSCredentialsProviderKeychainAccessKeyId] = internalCredentials.accessKey;
     self.keychain[AWSCredentialsProviderKeychainSecretAccessKey] = internalCredentials.secretKey;
