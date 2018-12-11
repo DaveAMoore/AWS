@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
     s.source       = { :git => "https://github.com/DaveAMoore/AWS.git", :tag => "v2.6.32" }
     
     s.requires_arc = true
+    s.pod_target_xcconfig = { "APPLICATION_EXTENSION_API_ONLY" => "YES" }
     s.public_header_files = "AWSCognitoIdentityProviderASF/*.h"
     s.source_files = "AWSCognitoIdentityProviderASF/**/*.{h,m,c}"
     s.private_header_files = "AWSCognitoIdentityProviderASF/Internal/*.h"

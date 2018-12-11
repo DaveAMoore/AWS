@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
     s.source       = { :git => "https://github.com/DaveAMoore/AWS.git", :tag => "v2.6.32" }
     
     s.requires_arc = true
+    s.pod_target_xcconfig = { "APPLICATION_EXTENSION_API_ONLY" => "YES" }
     s.compiler_flags = "-Wno-deprecated-declarations"
     s.frameworks   = "CoreGraphics", "Foundation", "SystemConfiguration", "Security"
     s.ios.frameworks = "UIKit"
