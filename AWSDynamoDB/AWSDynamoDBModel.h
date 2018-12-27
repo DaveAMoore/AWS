@@ -221,6 +221,11 @@ typedef NS_ENUM(NSInteger, AWSDynamoDBTableStatus) {
 - (instancetype)initWithString:(NSString *)s;
 
 /**
+ <p>Creates and returnsa new attribute value with a particular binary value.<p>
+ */
+- (instancetype)initWithBinary:(NSData *)b;
+
+/**
  <p>A Binary data type.</p>
  */
 @property (nonatomic, strong) NSData * _Nullable B;

@@ -65,6 +65,14 @@ NSString *const AWSDynamoDBErrorDomain = @"com.amazonaws.AWSDynamoDBErrorDomain"
     return self;
 }
 
+- (instancetype)initWithBinary:(NSData *)b {
+    self = [super init];
+    if (self) {
+        self.B = b;
+    }
+    return self;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"B" : @"B",
