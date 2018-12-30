@@ -154,26 +154,26 @@ NSString *const AWSSignatureV4Terminator = @"aws4_request";
         AWSCredentials *credentials = task.result;
         // clear authorization header if set
         [request setValue:nil forHTTPHeaderField:@"Authorization"];
-        
+
         if (credentials) {
             NSString *authorization;
             NSArray *hostArray  = [[[request URL] host] componentsSeparatedByString:@"."];
-            
+
             [request setValue:credentials.sessionKey forHTTPHeaderField:@"X-Amz-Security-Token"];
-            if ([hostArray firstObject] && [[hostArray firstObject] rangeOfString:@"s3"].location != NSNotFound) {
+            if (self.endpoint.serviceType == AWSServiceS3 ||
+                ([hostArray firstObject] && [[hostArray firstObject] rangeOfString:@"s3"].location != NSNotFound) ) {
                 //If it is a S3 Request
                 authorization = [self signS3RequestV4:request
-                                          credentials:credentials];
+                                         credentials:credentials];
             } else {
                 authorization = [self signRequestV4:request
-                                        credentials:credentials];
+                                       credentials:credentials];
             }
-            
+
             if (authorization) {
                 [request setValue:authorization forHTTPHeaderField:@"Authorization"];
             }
         }
-        
         return nil;
     }];
 }
@@ -378,7 +378,7 @@ NSString *const AWSSignatureV4Terminator = @"aws4_request";
                                                                       keyPath:(NSString *)keyPath
                                                                requestHeaders:(NSDictionary<NSString *, NSString *> *)requestHeaders
                                                             requestParameters:(NSDictionary<NSString *, id> *)requestParameters
-                                                                     signBody:(BOOL)signBody {
+                                                                     signBody:(BOOL)signBody{
     
     return [[credentialsProvider credentials] continueWithSuccessBlock:^id _Nullable(AWSTask<AWSCredentials *> * _Nonnull task) {
         AWSCredentials *credentials = task.result;
@@ -532,16 +532,24 @@ NSString *const AWSSignatureV4Terminator = @"aws4_request";
     NSMutableDictionary<NSString *, NSMutableArray<NSString *> *> *queryDictionary = [NSMutableDictionary new];
     [[query componentsSeparatedByString:@"&"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSArray *components = [obj componentsSeparatedByString:@"="];
-        if ([components count] == 2) {
-            // ?a=b
-            NSString *key = components[0]; // a
-            NSString *value = components[1]; // b
-            if (queryDictionary[key]) {
-                // If the query parameter has multiple values, add it in the mutable array
-                [[queryDictionary objectForKey:key] addObject:value];
-            } else {
-                // Insert the value for query parameter as an element in mutable array
-                [queryDictionary setObject:[@[value] mutableCopy] forKey:key];
+        NSString *key;
+        NSString *value = @"";
+        NSUInteger count = [components count];
+        if (count > 0 && count <= 2) {
+            //can be ?a=b or ?a
+            key = components[0];
+            if  (! [key isEqualToString:@""] ) {
+                if (count == 2) {
+                    //is ?a=b
+                    value = components[1];
+                }
+                if (queryDictionary[key]) {
+                    // If the query parameter has multiple values, add it in the mutable array
+                    [[queryDictionary objectForKey:key] addObject:value];
+                } else {
+                    // Insert the value for query parameter as an element in mutable array
+                    [queryDictionary setObject:[@[value] mutableCopy] forKey:key];
+                }
             }
         }
     }];

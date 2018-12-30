@@ -16,7 +16,7 @@
 #import "AWSCredentialsProvider.h"
 #import "AWSCognitoIdentity.h"
 #import "AWSSTS.h"
-#import "AWSKeyChainStore.h"
+#import "AWSUICKeyChainStore.h"
 #import "AWSCocoaLumberjack.h"
 #import "AWSBolts.h"
 
@@ -146,7 +146,7 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
 @interface AWSWebIdentityCredentialsProvider()
 
 @property (nonatomic, strong) AWSSTS *sts;
-@property (nonatomic, strong) AWSKeyChainStore *keychain;
+@property (nonatomic, strong) AWSUICKeyChainStore *keychain;
 @property (nonatomic, strong) AWSCredentials *internalCredentials;
 
 @end
@@ -161,7 +161,7 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
                    roleSessionName:(NSString *)roleSessionName
                   webIdentityToken:(NSString *)webIdentityToken {
     if (self = [super init]) {
-        _keychain = [AWSKeyChainStore keyChainStoreWithService:[NSString stringWithFormat:@"%@.%@.%@", providerId, webIdentityToken, roleArn]];
+        _keychain = [AWSUICKeyChainStore keyChainStoreWithService:[NSString stringWithFormat:@"%@.%@.%@", providerId, webIdentityToken, roleArn]];
         _providerId = providerId;
         _roleArn = roleArn;
         _roleSessionName = roleSessionName;
@@ -264,7 +264,7 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
 @property (nonatomic, strong) NSString *unAuthRoleArn;
 @property (nonatomic, strong) AWSSTS *sts;
 @property (nonatomic, strong) AWSCognitoIdentity *cognitoIdentity;
-@property (nonatomic, strong) AWSKeyChainStore *keychain;
+@property (nonatomic, strong) AWSUICKeyChainStore *keychain;
 @property (nonatomic, strong) AWSExecutor *refreshExecutor;
 @property (nonatomic, strong) dispatch_semaphore_t semaphore;
 @property (atomic, assign) BOOL useEnhancedFlow;
@@ -275,6 +275,7 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
 @end
 
 @implementation AWSCognitoCredentialsProvider
+
 @synthesize internalCredentials = _internalCredentials;
 
 - (instancetype)initWithRegionType:(AWSRegionType)regionType
@@ -361,7 +362,7 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
                 authRoleArn:(NSString *)authRoleArn {
     _refreshExecutor = [AWSExecutor executorWithOperationQueue:[NSOperationQueue new]];
     _refreshingCredentials = NO;
-    _semaphore = dispatch_semaphore_create(1);
+    _semaphore = dispatch_semaphore_create(0);
 
     _identityProvider = identityProvider;
     _unAuthRoleArn = unauthRoleArn;
@@ -369,7 +370,7 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
     _useEnhancedFlow = !unauthRoleArn && !authRoleArn;
 
     // initialize keychain - name spaced by app bundle and identity pool id
-    _keychain = [AWSKeyChainStore keyChainStoreWithService:[NSString stringWithFormat:@"%@.%@.%@", [NSBundle mainBundle].bundleIdentifier, [AWSCognitoCredentialsProvider class], identityProvider.identityPoolId]];
+    _keychain = [AWSUICKeyChainStore keyChainStoreWithService:[NSString stringWithFormat:@"%@.%@.%@", [NSBundle mainBundle].bundleIdentifier, [AWSCognitoCredentialsProvider class], identityProvider.identityPoolId]];
 
     // If the identity provider has an identity id, use it
     if (identityProvider.identityId) {
@@ -526,23 +527,20 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
     // Returns cached credentials when all of the following conditions are true:
     // 1. The cached credentials are not nil.
     // 2. The credentials do not expire within 10 minutes.
-    if (self.internalCredentials &&
-        [self.internalCredentials.expiration compare:[NSDate dateWithTimeIntervalSinceNow:10 * 60]] == NSOrderedDescending) {
+    if (self.internalCredentials
+        && [self.internalCredentials.expiration compare:[NSDate dateWithTimeIntervalSinceNow:10 * 60]] == NSOrderedDescending) {
         return [AWSTask taskWithResult:self.internalCredentials];
     }
     
-    // Prevent multiple calls to refresh at any given time by using a semaphore. Never timeout.
-    dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
-    
     id<AWSCognitoCredentialsProviderHelper> providerRef = self.identityProvider;
-    return [[[providerRef logins] continueWithExecutor:self.refreshExecutor withSuccessBlock:^id _Nullable(AWSTask<NSDictionary<NSString * ,NSString *> *> * _Nonnull task) {
-        NSDictionary<NSString *, NSString *> *logins = task.result;
+    return [[[providerRef logins] continueWithExecutor:self.refreshExecutor withSuccessBlock:^id _Nullable(AWSTask<NSDictionary<NSString *,NSString *> *> * _Nonnull task) {
+        NSDictionary<NSString *,NSString *> *logins = task.result;
         
-        AWSTask *getIdentityIdTask = nil;
+        AWSTask * getIdentityIdTask = nil;
         
-        if (!providerRef.identityId) {
+        if(!providerRef.identityId){
             getIdentityIdTask = [self getIdentityId];
-        } else {
+        }else {
             self.identityId = providerRef.identityId;
             getIdentityIdTask = [AWSTask taskWithResult:nil];
         }
@@ -556,6 +554,16 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
                 && self.internalCredentials
                 && [self.internalCredentials.expiration compare:[NSDate dateWithTimeIntervalSinceNow:10 * 60]] == NSOrderedDescending) {
                 return [AWSTask taskWithResult:self.internalCredentials];
+            }
+            
+            if (self.isRefreshingCredentials) {
+                // Waits up to 60 seconds for the Google SDK to refresh a token.
+                if (dispatch_semaphore_wait(self.semaphore, dispatch_time(DISPATCH_TIME_NOW, 60 * NSEC_PER_SEC)) != 0) {
+                    NSError *error = [NSError errorWithDomain:AWSCognitoCredentialsProviderErrorDomain
+                                                         code:AWSCognitoCredentialsProviderCredentialsRefreshTimeout
+                                                     userInfo:nil];
+                    return [AWSTask taskWithError:error];
+                }
             }
             
             if ((!self.cachedLogins || [self.cachedLogins isEqualToDictionary:logins])
@@ -685,42 +693,27 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
     if (_internalCredentials) {
         return _internalCredentials;
     }
-    
-    NSString *accessKey = self.keychain[AWSCredentialsProviderKeychainAccessKeyId];
-    NSString *secretKey = self.keychain[AWSCredentialsProviderKeychainSecretAccessKey];
-    
-    if (accessKey && secretKey) {
+
+    if (self.keychain[AWSCredentialsProviderKeychainAccessKeyId]
+        && self.keychain[AWSCredentialsProviderKeychainSecretAccessKey]) {
         NSString *expirationString = self.keychain[AWSCredentialsProviderKeychainExpiration];
-        NSDate *expirationDate = nil;
+        NSDate *expiration = nil;
         if (expirationString) {
-            expirationDate = [NSDate dateWithTimeIntervalSince1970:[expirationString doubleValue]];
+            expiration = [NSDate dateWithTimeIntervalSince1970:[expirationString doubleValue]];
         }
-        
-        NSString *sessionKey = self.keychain[AWSCredentialsProviderKeychainSessionToken];
-        AWSCredentials *credentials = [[AWSCredentials alloc] initWithAccessKey:accessKey
-                                                                      secretKey:secretKey
-                                                                     sessionKey:sessionKey
-                                                                     expiration:expirationDate];
-        
-        // Cache the credentials.
-        [self setInternalCredentials:credentials];
-        
+        AWSCredentials *credentials = [[AWSCredentials alloc] initWithAccessKey:self.keychain[AWSCredentialsProviderKeychainAccessKeyId]
+                                                                      secretKey:self.keychain[AWSCredentialsProviderKeychainSecretAccessKey]
+                                                                     sessionKey:self.keychain[AWSCredentialsProviderKeychainSessionToken]
+                                                                     expiration:expiration];
         return credentials;
-    } else {
-        return nil;
     }
+
+    return nil;
 }
 
 - (void)setInternalCredentials:(AWSCredentials *)internalCredentials {
     _internalCredentials = internalCredentials;
 
-    /// Temporary fix for blocking SecItemDelete call.
-    #if TARGET_OS_OSX && !TARGET_OS_IPHONE
-    if (!internalCredentials) {
-        return;
-    }
-    #endif
-    
     self.keychain[AWSCredentialsProviderKeychainAccessKeyId] = internalCredentials.accessKey;
     self.keychain[AWSCredentialsProviderKeychainSecretAccessKey] = internalCredentials.secretKey;
     self.keychain[AWSCredentialsProviderKeychainSessionToken] = internalCredentials.sessionKey;

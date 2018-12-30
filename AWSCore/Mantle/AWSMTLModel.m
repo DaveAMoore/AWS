@@ -42,10 +42,7 @@ static BOOL MTLValidateAndSetValue(id obj, NSString *key, id value, BOOL forceUp
 	__autoreleasing id validatedValue = value;
 
 	@try {
-        // Remove to fix leak.
-        /* if (![obj validateValue:&validatedValue forKey:key error:error]) {
-            return NO;
-        } */
+		if (![obj validateValue:&validatedValue forKey:key error:error]) return NO;
 
 		if (forceUpdate || value != validatedValue) {
 			[obj setValue:validatedValue forKey:key];
@@ -109,12 +106,6 @@ static BOOL MTLValidateAndSetValue(id obj, NSString *key, id value, BOOL forceUp
 	}
 
 	return self;
-}
-
-#pragma mark Leak Work Around
-
-- (BOOL)validateValue:(inout id  _Nullable __autoreleasing *)ioValue forKey:(NSString *)inKey error:(out NSError * _Nullable __autoreleasing *)outError {
-    return YES;
 }
 
 #pragma mark Reflection

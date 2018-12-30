@@ -69,6 +69,8 @@
         switch (error.code) {
             case NSURLErrorCancelled:
             case NSURLErrorBadURL:
+            case NSURLErrorNotConnectedToInternet:
+
             case NSURLErrorSecureConnectionFailed:
             case NSURLErrorServerCertificateHasBadDate:
             case NSURLErrorServerCertificateUntrusted:
@@ -78,6 +80,7 @@
             case NSURLErrorClientCertificateRequired:
             case NSURLErrorCannotLoadFromNetwork:
                 return AWSNetworkingRetryTypeShouldNotRetry;
+
             default:
                 return AWSNetworkingRetryTypeShouldRetry;
         }
@@ -123,6 +126,7 @@
         case 503:
             return AWSNetworkingRetryTypeShouldRetry;
             break;
+
         default:
             break;
     }

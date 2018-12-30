@@ -147,7 +147,7 @@ return ret;
 }
 
 
-#if TARGET_OS_OSX && !TARGET_OS_IPHONE
+#if TARGET_OS_MAC && !TARGET_OS_IPHONE
 - (NSString*)applicationIDString {
     NSString *s = NSFileTypeForHFSTypeCode([self applicationID]);
     

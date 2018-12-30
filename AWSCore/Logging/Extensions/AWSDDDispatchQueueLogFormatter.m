@@ -15,16 +15,12 @@
 
 #import "AWSDDDispatchQueueLogFormatter.h"
 #import <libkern/OSAtomic.h>
-#import <os/lock.h>
 #import <objc/runtime.h>
 
 
 #if !__has_feature(objc_arc)
 #error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
 #endif
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 
 @interface AWSDDDispatchQueueLogFormatter () {
     AWSDDDispatchQueueLogFormatterMode _mode;
@@ -280,5 +276,3 @@
 }
 
 @end
-
-#pragma clang diagnostic pop

@@ -14,12 +14,11 @@
 //
 
 #import "AWSClientContext.h"
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <sys/types.h>
 #import <sys/sysctl.h>
-#import "AWSKeyChainStore.h"
+#import "AWSUICKeyChainStore.h"
 #import "AWSCocoaLumberjack.h"
-#import "AWSDevice.h"
 
 // Public constants
 NSString *const AWSClientContextVersion = @"1.0";
@@ -41,7 +40,7 @@ static NSString *const AWSClientContextKeychainInstallationIdKey = @"com.amazona
 
 - (instancetype)init {
     if (self = [super init]) {
-        AWSKeyChainStore *keychain = [AWSKeyChainStore keyChainStoreWithService:AWSClientContextKeychainService];
+        AWSUICKeyChainStore *keychain = [AWSUICKeyChainStore keyChainStoreWithService:AWSClientContextKeychainService];
         _installationId = [keychain stringForKey:AWSClientContextKeychainInstallationIdKey];
         if (!_installationId) {
             static dispatch_once_t onceToken;
@@ -67,7 +66,7 @@ static NSString *const AWSClientContextKeychainInstallationIdKey = @"com.amazona
         _appName = appName ? appName : AWSClientContextUnknown;
 
         //Device Details
-        AWSDevice* currentDevice = [AWSDevice currentDevice];
+        UIDevice* currentDevice = [UIDevice currentDevice];
         NSString *autoUpdatingLoaleIdentifier = [[NSLocale autoupdatingCurrentLocale] localeIdentifier];
         _devicePlatform = [currentDevice systemName] ? [currentDevice systemName] : AWSClientContextUnknown;
         _deviceModel = [currentDevice model] ? [currentDevice model] : AWSClientContextUnknown;
