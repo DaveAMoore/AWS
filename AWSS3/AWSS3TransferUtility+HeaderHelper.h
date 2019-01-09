@@ -1,5 +1,5 @@
 //
-// Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // You may not use this file except in compliance with the License.
@@ -12,13 +12,8 @@
 // express or implied. See the License for the specific language governing
 // permissions and limitations under the License.
 //
+#import <AWSS3/AWSS3.h>
 
-#import <Foundation/Foundation.h>
-
-@interface AWSS3Resources : NSObject
-
-+ (instancetype)sharedInstance;
-
-- (NSDictionary *)JSONObject;
+@interface AWSS3TransferUtility (HeaderHelper)
 
 @end

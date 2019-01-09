@@ -65,6 +65,8 @@ NSString *const AWSS3TransferManagerUserAgentPrefix = @"transfer-manager";
 
 @end
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 @implementation AWSS3TransferManager
 
 static AWSSynchronizedMutableDictionary *_serviceClients = nil;
@@ -784,6 +786,8 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
 }
 
 @end
+
+#pragma clang diagnostic pop
 
 @implementation AWSS3TransferManagerUploadRequest
 @dynamic body;
