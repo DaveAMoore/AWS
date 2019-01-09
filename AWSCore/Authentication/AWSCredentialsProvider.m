@@ -361,7 +361,7 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
                 authRoleArn:(NSString *)authRoleArn {
     _refreshExecutor = [AWSExecutor executorWithOperationQueue:[NSOperationQueue new]];
     _refreshingCredentials = NO;
-    _semaphore = dispatch_semaphore_create(1);
+    _semaphore = dispatch_semaphore_create(0);
 
     _identityProvider = identityProvider;
     _unAuthRoleArn = unauthRoleArn;
@@ -531,9 +531,6 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
         return [AWSTask taskWithResult:self.internalCredentials];
     }
     
-    // Prevent multiple calls to refresh at any given time by using a semaphore. Never timeout.
-    dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
-    
     id<AWSCognitoCredentialsProviderHelper> providerRef = self.identityProvider;
     return [[[providerRef logins] continueWithExecutor:self.refreshExecutor withSuccessBlock:^id _Nullable(AWSTask<NSDictionary<NSString * ,NSString *> *> * _Nonnull task) {
         NSDictionary<NSString *, NSString *> *logins = task.result;
@@ -556,6 +553,16 @@ static NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
                 && self.internalCredentials
                 && [self.internalCredentials.expiration compare:[NSDate dateWithTimeIntervalSinceNow:10 * 60]] == NSOrderedDescending) {
                 return [AWSTask taskWithResult:self.internalCredentials];
+            }
+            
+            if (self.isRefreshingCredentials) {
+                // Waits up to 60 seconds for the Google SDK to refresh a token.
+                if (dispatch_semaphore_wait(self.semaphore, dispatch_time(DISPATCH_TIME_NOW, 60 * NSEC_PER_SEC)) != 0) {
+                    NSError *error = [NSError errorWithDomain:AWSCognitoCredentialsProviderErrorDomain
+                                                         code:AWSCognitoCredentialsProviderCredentialsRefreshTimeout
+                                                     userInfo:nil];
+                    return [AWSTask taskWithError:error];
+                }
             }
             
             if ((!self.cachedLogins || [self.cachedLogins isEqualToDictionary:logins])

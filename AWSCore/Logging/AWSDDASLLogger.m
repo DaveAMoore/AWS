@@ -20,9 +20,6 @@
 #error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
 #endif
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-implementations"
-
 const char* const kAWSDDASLKeyAWSDDLog = "AWSDDLog";
 
 const char* const kAWSDDASLAWSDDLogValue = "1";
@@ -122,5 +119,3 @@ static AWSDDASLLogger *sharedInstance;
 }
 
 @end
-
-#pragma clang diagnostic pop

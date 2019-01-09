@@ -41,9 +41,6 @@ NSString *const AWSTaskMultipleErrorsUserInfoKey = @"errors";
 
 @end
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-implementations"
-
 @implementation AWSTask
 
 #pragma mark - Initializer
@@ -464,7 +461,5 @@ NSString *const AWSTaskMultipleErrorsUserInfoKey = @"errors";
 }
 
 @end
-
-#pragma clang diagnostic pop
 
 NS_ASSUME_NONNULL_END

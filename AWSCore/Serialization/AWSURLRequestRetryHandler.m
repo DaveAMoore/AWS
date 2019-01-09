@@ -69,6 +69,7 @@
         switch (error.code) {
             case NSURLErrorCancelled:
             case NSURLErrorBadURL:
+            case NSURLErrorNotConnectedToInternet:
             case NSURLErrorSecureConnectionFailed:
             case NSURLErrorServerCertificateHasBadDate:
             case NSURLErrorServerCertificateUntrusted:
