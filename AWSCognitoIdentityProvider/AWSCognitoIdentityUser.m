@@ -484,56 +484,68 @@ static const NSString * AWSCognitoIdentityUserUserAttributePrefix = @"userAttrib
 /**
  * Generates a device password, calls service to exchange the password verifier and prompts user to remember the device as required.
  */
-- (AWSTask*) confirmDeviceInternal:(AWSCognitoIdentityProviderAuthenticationResultType *) authResult {
-    if(authResult.latestDeviceMetadata != nil){
-        NSString * deviceKey = authResult.latestDeviceMetadata.deviceKey;
-        NSString * deviceGroup = authResult.latestDeviceMetadata.deviceGroupKey;
-        if(deviceKey != nil){
-            NSString *secret = [[NSUUID UUID] UUIDString];
-            AWSCognitoIdentityProviderConfirmDeviceRequest * request = [AWSCognitoIdentityProviderConfirmDeviceRequest new];
-            request.accessToken = authResult.accessToken;
-            request.deviceKey = deviceKey;
-            request.deviceName = [[UIDevice currentDevice] name];
-
-            AWSCognitoIdentityProviderSrpHelper * srpHelper = [[AWSCognitoIdentityProviderSrpHelper alloc] initWithPoolName:deviceGroup userName:deviceKey password:secret];
-            request.deviceSecretVerifierConfig = [AWSCognitoIdentityProviderDeviceSecretVerifierConfigType new];
-            request.deviceSecretVerifierConfig.salt = [[NSData aws_dataWithSignedBigInteger:srpHelper.salt] base64EncodedStringWithOptions:0];
-            request.deviceSecretVerifierConfig.passwordVerifier = [[NSData aws_dataWithSignedBigInteger:srpHelper.v] base64EncodedStringWithOptions:0];
-            return [[self.pool.client confirmDevice:request] continueWithSuccessBlock:^id _Nullable(AWSTask<AWSCognitoIdentityProviderConfirmDeviceResponse *> * _Nonnull task) {
-                [self persistDevice:deviceKey deviceSecret:secret deviceGroup:deviceGroup];
-                AWSCognitoIdentityProviderConfirmDeviceResponse *confirmDeviceResponse = task.result;
-                if([confirmDeviceResponse.userConfirmationNecessary boolValue]) {
-                    if ([self.pool.delegate respondsToSelector:@selector(startRememberDevice)]) {
-                        id<AWSCognitoIdentityRememberDevice> rememberDeviceStep = [self.pool.delegate startRememberDevice];
-                        AWSTaskCompletionSource<NSNumber *> *rememberDevice = [[AWSTaskCompletionSource<NSNumber *> alloc] init];
-                        [rememberDeviceStep getRememberDevice:rememberDevice];
-                        return [rememberDevice.task continueWithBlock:^id _Nullable(AWSTask<NSNumber *> * _Nonnull rememberDeviceTask) {
-                            if(rememberDeviceTask.isCancelled || rememberDeviceTask.error){
-                                [rememberDeviceStep didCompleteRememberDeviceStepWithError:rememberDeviceTask.error];
-                                return rememberDeviceStep;
-                            }else if ([rememberDeviceTask.result boolValue]){
-                                AWSCognitoIdentityProviderUpdateDeviceStatusRequest * request = [AWSCognitoIdentityProviderUpdateDeviceStatusRequest new];
-                                request.accessToken = authResult.accessToken;
-                                request.deviceKey = deviceKey;
-                                request.deviceRememberedStatus = AWSCognitoIdentityProviderDeviceRememberedStatusTypeRemembered;
-                                return [[self.pool.client updateDeviceStatus:request] continueWithBlock:^id _Nullable(AWSTask<AWSCognitoIdentityProviderUpdateDeviceStatusResponse *> * _Nonnull updateDeviceStatusTask) {
-                                    [rememberDeviceStep didCompleteRememberDeviceStepWithError:rememberDeviceTask.error];
-                                    return updateDeviceStatusTask;
-                                }];
-                            }
-                            return task;
-                        }];
-
-
-                    }else {
-                        AWSDDLogWarn(@"startRememberDevice is not implemented by authentication delegate, defaulting to not remembered.");
-                    }
-                }
-                return task;
-            }];
-        }
+- (AWSTask *)confirmDeviceInternal:(AWSCognitoIdentityProviderAuthenticationResultType *)authenticationResult {
+    if (!authenticationResult.latestDeviceMetadata) {
+        return [AWSTask taskWithResult:nil];
     }
-    return [AWSTask taskWithResult:nil];
+    
+    NSString *deviceKey = authenticationResult.latestDeviceMetadata.deviceKey;
+    NSString *deviceGroup = authenticationResult.latestDeviceMetadata.deviceGroupKey;
+    
+    if (!deviceKey) {
+        return [AWSTask taskWithResult:nil];
+    }
+    
+    NSString *secret = [[NSUUID UUID] UUIDString];
+    AWSCognitoIdentityProviderConfirmDeviceRequest *request = [AWSCognitoIdentityProviderConfirmDeviceRequest new];
+    request.accessToken = authenticationResult.accessToken;
+    request.deviceKey = deviceKey;
+    request.deviceName = [[AWSDevice currentDevice] name];
+    
+    AWSCognitoIdentityProviderSrpHelper *srpHelper = [[AWSCognitoIdentityProviderSrpHelper alloc] initWithPoolName:deviceGroup
+                                                                                                          userName:deviceKey
+                                                                                                          password:secret];
+    request.deviceSecretVerifierConfig = [AWSCognitoIdentityProviderDeviceSecretVerifierConfigType new];
+    request.deviceSecretVerifierConfig.salt = [[NSData aws_dataWithSignedBigInteger:srpHelper.salt] base64EncodedStringWithOptions:0];
+    request.deviceSecretVerifierConfig.passwordVerifier = [[NSData aws_dataWithSignedBigInteger:srpHelper.v] base64EncodedStringWithOptions:0];
+
+    return [[self.pool.client confirmDevice:request] continueWithSuccessBlock:^id _Nullable(AWSTask<AWSCognitoIdentityProviderConfirmDeviceResponse *> *task) {
+        [self persistDevice:deviceKey deviceSecret:secret deviceGroup:deviceGroup];
+        
+        AWSCognitoIdentityProviderConfirmDeviceResponse *confirmDeviceResponse = task.result;
+        
+        if (confirmDeviceResponse.userConfirmationNecessary.boolValue) {
+            if ([self.pool.delegate respondsToSelector:@selector(startRememberDevice)]) {
+                id<AWSCognitoIdentityRememberDevice> rememberDeviceStep = [self.pool.delegate startRememberDevice];
+                AWSTaskCompletionSource<NSNumber *> *rememberDevice = [[AWSTaskCompletionSource<NSNumber *> alloc] init];
+                [rememberDeviceStep getRememberDevice:rememberDeviceStep];
+                
+                return [rememberDevice.task continueWithBlock:^id _Nullable(AWSTask<NSNumber *> * _Nonnull rememberDeviceTask) {
+                    if (rememberDeviceTask.isCancelled || rememberDeviceTask.error) {
+                        [rememberDeviceStep didCompleteRememberDeviceStepWithError:rememberDeviceTask.error];
+                        return rememberDeviceStep;
+                    } else if (rememberDeviceTask.result.boolValue) {
+                        AWSCognitoIdentityProviderUpdateDeviceStatusRequest *request = [AWSCognitoIdentityProviderUpdateDeviceStatusRequest new];
+                        request.accessToken = authenticationResult.accessToken;
+                        request.deviceKey = deviceKey;
+                        request.deviceRememberedStatus = AWSCognitoIdentityProviderDeviceRememberedStatusTypeRemembered;
+                        
+                        return [[self.pool.client updateDeviceStatus:request] continueWithBlock:^id _Nullable(AWSTask<AWSCognitoIdentityProviderUpdateDeviceStatusResponse *> * _Nonnull updateDeviceStatusTask) {
+                            [rememberDeviceStep didCompleteRememberDeviceStepWithError:rememberDeviceTask.error];
+                            return updateDeviceStatusTask;
+                        }];
+                    } else {
+                        return task;
+                    }
+                }];
+            } else {
+                AWSDDLogWarn(@"startRememberDevice is not implemented by authentication delegate, defaulting to not remembered.");
+                return [AWSTask taskWithResult:nil];
+            }
+        } else {
+            return task;
+        }
+    }];
 }
 
 /**
