@@ -202,6 +202,11 @@ typedef void (^AWSS3TransferUtilityMultiPartProgressBlock) (AWSS3TransferUtility
 @property (readonly) NSProgress *progress;
 
 /**
+ The ETag of the last part.
+ */
+@property (nullable, nonatomic, readonly) NSString *ETag;
+
+/**
  the status of the Transfer.
  */
 @property (readonly) AWSS3TransferUtilityTransferStatusType status;

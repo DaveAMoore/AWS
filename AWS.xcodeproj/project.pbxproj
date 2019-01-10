@@ -311,8 +311,8 @@
 		637BC31920C758E800038F97 /* AWSSQSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 637BC31820C758E800038F97 /* AWSSQSTests.m */; };
 		637BC31B20C758E800038F97 /* AWSSQS.h in Headers */ = {isa = PBXBuildFile; fileRef = 637BC30D20C758E800038F97 /* AWSSQS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		639F179020C7687D005E0FAB /* AWSS3Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 639F178E20C7687D005E0FAB /* AWSS3Model.m */; };
-		63A6EDA121E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A6ED9F21E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.h */; };
-		63A6EDA221E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A6ED9F21E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.h */; };
+		63A6EDA121E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A6ED9F21E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63A6EDA221E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A6ED9F21E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63A6EDA321E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A6EDA021E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.m */; };
 		63A6EDA421E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A6EDA021E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.m */; };
 		63A6EDA721E6BC2700A2A9CD /* AWSS3TransferUtilityDatabaseHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A6EDA521E6BC2600A2A9CD /* AWSS3TransferUtilityDatabaseHelper.h */; };

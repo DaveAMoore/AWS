@@ -73,6 +73,9 @@ static AWSCognitoSyncPlatform _pushPlatform;
 
 @end
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
+
 @implementation AWSCognito
 
 static AWSSynchronizedMutableDictionary *_serviceClients = nil;
@@ -399,3 +402,5 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
 }
 
 @end
+
+#pragma clang diagnostic pop

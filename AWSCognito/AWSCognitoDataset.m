@@ -439,7 +439,10 @@
                 //if there are conflicts start conflict resolution
                 if([conflicts count] > 0){
                     if(self.conflictHandler == nil) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
                         self.conflictHandler = [AWSCognito defaultConflictHandler];
+#pragma clang diagnostic pop
                     }
                     
                     for (AWSCognitoConflict *conflict in conflicts) {
@@ -525,7 +528,10 @@
         request.datasetName = self.name;
         request.recordPatches = patches;
         request.syncSessionToken = self.syncSessionToken;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
         request.deviceId = [AWSCognito cognitoDeviceId];
+#pragma clang diagnostic pop
         return [[self.cognitoService updateRecords:request] continueWithBlock:^id(AWSTask *task) {
             NSNumber * currentSyncCount = self.lastSyncCount;
             BOOL okToUpdateSyncCount = YES;
@@ -727,7 +733,10 @@
 }
 
 -(AWSTask *)subscribe {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
     NSString *currentDeviceId = [AWSCognito cognitoDeviceId];
+#pragma clang diagnostic pop
     
     if(!currentDeviceId){
         return [AWSTask taskWithError:[NSError errorWithDomain:AWSCognitoErrorDomain code:AWSCognitoErrorDeviceNotRegistered userInfo:nil]];
@@ -751,7 +760,10 @@
 }
 
 -(AWSTask *)unsubscribe {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
     NSString *currentDeviceId = [AWSCognito cognitoDeviceId];
+#pragma clang diagnostic pop
     
     if(!currentDeviceId){
         return [AWSTask taskWithError:[NSError errorWithDomain:AWSCognitoErrorDomain code:AWSCognitoErrorDeviceNotRegistered userInfo:nil]];

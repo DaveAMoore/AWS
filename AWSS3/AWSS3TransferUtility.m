@@ -2199,6 +2199,17 @@ didCompleteWithError:(NSError *)error {
                             transferUtilityMultiPartUploadTask.expression.progressBlock(transferUtilityMultiPartUploadTask, transferUtilityMultiPartUploadTask.progress);
                         }
                     }
+                    if (task.result) {
+                        NSString *ETag = [(AWSS3CompleteMultipartUploadOutput *)task.result ETag];
+                        
+                        // Remove the quotation marks.
+                        if (ETag) {
+                            ETag = [ETag stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
+                        }
+                        
+                        // Propogate the last ETag.
+                        [transferUtilityMultiPartUploadTask setETag:ETag];
+                    }
                     
                     [self cleanupForMultiPartUploadTask:transferUtilityMultiPartUploadTask];
                     

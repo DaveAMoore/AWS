@@ -3767,6 +3767,22 @@ NSString *const AWSDynamoDBErrorDomain = @"com.amazonaws.AWSDynamoDBErrorDomain"
 
 @implementation AWSDynamoDBWriteRequest
 
+- (instancetype)initWithPutRequest:(AWSDynamoDBPutRequest *)putRequest {
+    self = [super self];
+    if (self) {
+        self.putRequest = putRequest;
+    }
+    return self;
+}
+
+- (instancetype)initWithDeleteRequest:(AWSDynamoDBDeleteRequest *)deleteRequest {
+    self = [super self];
+    if (self) {
+        self.deleteRequest = deleteRequest;
+    }
+    return self;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
              @"deleteRequest" : @"DeleteRequest",
