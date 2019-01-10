@@ -1088,6 +1088,18 @@
 		632FC2A820C777A70083A946 /* AWSSQSResources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSSQSResources.m; sourceTree = "<group>"; };
 		632FC2A920C777A80083A946 /* AWSSQSService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSSQSService.m; sourceTree = "<group>"; };
 		632FC2AA20C777A80083A946 /* AWSSQSService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSSQSService.h; sourceTree = "<group>"; };
+		6332325821E6FE7400DAB8CB /* AWSAutoScaling.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AWSAutoScaling.podspec; sourceTree = "<group>"; };
+		6332325921E6FE7400DAB8CB /* AWSCognito.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AWSCognito.podspec; sourceTree = "<group>"; };
+		6332325A21E6FE7400DAB8CB /* AWSCognitoIdentityProvider.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AWSCognitoIdentityProvider.podspec; sourceTree = "<group>"; };
+		6332325B21E6FE7400DAB8CB /* AWS.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AWS.podspec; sourceTree = "<group>"; };
+		6332325C21E6FE7400DAB8CB /* AWSCognitoIdentityProviderASF.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AWSCognitoIdentityProviderASF.podspec; sourceTree = "<group>"; };
+		6332325D21E6FE7400DAB8CB /* AWSSQS.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AWSSQS.podspec; sourceTree = "<group>"; };
+		6332325E21E6FE7400DAB8CB /* AWSDynamoDB.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AWSDynamoDB.podspec; sourceTree = "<group>"; };
+		6332325F21E6FE7400DAB8CB /* AWSS3.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AWSS3.podspec; sourceTree = "<group>"; };
+		6332326021E6FE7400DAB8CB /* AWSIoT.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AWSIoT.podspec; sourceTree = "<group>"; };
+		6332326121E6FE7400DAB8CB /* AWSSNS.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AWSSNS.podspec; sourceTree = "<group>"; };
+		6332326221E6FE7400DAB8CB /* AWSCore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AWSCore.podspec; sourceTree = "<group>"; };
+		6332326321E6FE7400DAB8CB /* publish-podspecs.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "publish-podspecs.py"; sourceTree = "<group>"; };
 		63565B2A20DEE4D6007BD703 /* AWSS3Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSS3Model.h; sourceTree = "<group>"; };
 		63565B2C20DEE54E007BD703 /* AWSS3RequestRetryHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSS3RequestRetryHandler.m; sourceTree = "<group>"; };
 		637BC24720C7582600038F97 /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1989,10 +2001,30 @@
 			path = AWSDynamoDBTests;
 			sourceTree = "<group>";
 		};
+		6332325721E6FE7400DAB8CB /* Podspecs */ = {
+			isa = PBXGroup;
+			children = (
+				6332325821E6FE7400DAB8CB /* AWSAutoScaling.podspec */,
+				6332325921E6FE7400DAB8CB /* AWSCognito.podspec */,
+				6332325A21E6FE7400DAB8CB /* AWSCognitoIdentityProvider.podspec */,
+				6332325B21E6FE7400DAB8CB /* AWS.podspec */,
+				6332325C21E6FE7400DAB8CB /* AWSCognitoIdentityProviderASF.podspec */,
+				6332325D21E6FE7400DAB8CB /* AWSSQS.podspec */,
+				6332325E21E6FE7400DAB8CB /* AWSDynamoDB.podspec */,
+				6332325F21E6FE7400DAB8CB /* AWSS3.podspec */,
+				6332326021E6FE7400DAB8CB /* AWSIoT.podspec */,
+				6332326121E6FE7400DAB8CB /* AWSSNS.podspec */,
+				6332326221E6FE7400DAB8CB /* AWSCore.podspec */,
+				6332326321E6FE7400DAB8CB /* publish-podspecs.py */,
+			);
+			path = Podspecs;
+			sourceTree = "<group>";
+		};
 		637BC21520C757FC00038F97 = {
 			isa = PBXGroup;
 			children = (
 				63B82D6E212A308C002924AD /* README.md */,
+				6332325721E6FE7400DAB8CB /* Podspecs */,
 				637BC24820C7582600038F97 /* AWSCore */,
 				637BC25320C7582600038F97 /* AWSCoreTests */,
 				637BC26420C7585F00038F97 /* AWSAutoScaling */,
