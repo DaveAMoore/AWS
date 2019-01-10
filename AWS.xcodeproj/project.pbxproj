@@ -284,6 +284,10 @@
 		632FC2AE20C777A80083A946 /* AWSSQSResources.m in Sources */ = {isa = PBXBuildFile; fileRef = 632FC2A820C777A70083A946 /* AWSSQSResources.m */; };
 		632FC2AF20C777A80083A946 /* AWSSQSService.m in Sources */ = {isa = PBXBuildFile; fileRef = 632FC2A920C777A80083A946 /* AWSSQSService.m */; };
 		632FC2B020C777A80083A946 /* AWSSQSService.h in Headers */ = {isa = PBXBuildFile; fileRef = 632FC2AA20C777A80083A946 /* AWSSQSService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6332326F21E7962200DAB8CB /* AWSS3TransferUtility+HeaderHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6332326D21E7962100DAB8CB /* AWSS3TransferUtility+HeaderHelper.h */; };
+		6332327021E7962200DAB8CB /* AWSS3TransferUtility+HeaderHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6332326D21E7962100DAB8CB /* AWSS3TransferUtility+HeaderHelper.h */; };
+		6332327121E7962200DAB8CB /* AWSS3TransferUtility+HeaderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6332326E21E7962100DAB8CB /* AWSS3TransferUtility+HeaderHelper.m */; };
+		6332327221E7962200DAB8CB /* AWSS3TransferUtility+HeaderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6332326E21E7962100DAB8CB /* AWSS3TransferUtility+HeaderHelper.m */; };
 		63565B2B20DEE4D6007BD703 /* AWSS3Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 63565B2A20DEE4D6007BD703 /* AWSS3Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63565B2D20DEE54E007BD703 /* AWSS3RequestRetryHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 63565B2C20DEE54E007BD703 /* AWSS3RequestRetryHandler.m */; };
 		637BC25020C7582600038F97 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637BC24720C7582600038F97 /* AWSCore.framework */; };
@@ -1100,6 +1104,8 @@
 		6332326121E6FE7400DAB8CB /* AWSSNS.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AWSSNS.podspec; sourceTree = "<group>"; };
 		6332326221E6FE7400DAB8CB /* AWSCore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AWSCore.podspec; sourceTree = "<group>"; };
 		6332326321E6FE7400DAB8CB /* publish-podspecs.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "publish-podspecs.py"; sourceTree = "<group>"; };
+		6332326D21E7962100DAB8CB /* AWSS3TransferUtility+HeaderHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AWSS3TransferUtility+HeaderHelper.h"; sourceTree = "<group>"; };
+		6332326E21E7962100DAB8CB /* AWSS3TransferUtility+HeaderHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AWSS3TransferUtility+HeaderHelper.m"; sourceTree = "<group>"; };
 		63565B2A20DEE4D6007BD703 /* AWSS3Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSS3Model.h; sourceTree = "<group>"; };
 		63565B2C20DEE54E007BD703 /* AWSS3RequestRetryHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSS3RequestRetryHandler.m; sourceTree = "<group>"; };
 		637BC24720C7582600038F97 /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2258,6 +2264,8 @@
 				63A6EDA621E6BC2600A2A9CD /* AWSS3TransferUtilityDatabaseHelper.m */,
 				63A6ED9F21E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.h */,
 				63A6EDA021E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.m */,
+				6332326D21E7962100DAB8CB /* AWSS3TransferUtility+HeaderHelper.h */,
+				6332326E21E7962100DAB8CB /* AWSS3TransferUtility+HeaderHelper.m */,
 				637BC2D620C758AF00038F97 /* Info.plist */,
 			);
 			path = AWSS3;
@@ -2607,6 +2615,7 @@
 				63A6EDA721E6BC2700A2A9CD /* AWSS3TransferUtilityDatabaseHelper.h in Headers */,
 				63565B2B20DEE4D6007BD703 /* AWSS3Model.h in Headers */,
 				637BC2E320C758AF00038F97 /* AWSS3.h in Headers */,
+				6332326F21E7962200DAB8CB /* AWSS3TransferUtility+HeaderHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2809,6 +2818,7 @@
 				63A6EDA821E6BC2700A2A9CD /* AWSS3TransferUtilityDatabaseHelper.h in Headers */,
 				63B82A5A2129C973002924AD /* AWSS3.h in Headers */,
 				63B82A6B2129C973002924AD /* AWSS3TransferUtility+Validation.h in Headers */,
+				6332327021E7962200DAB8CB /* AWSS3TransferUtility+HeaderHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4294,6 +4304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6332327121E7962200DAB8CB /* AWSS3TransferUtility+HeaderHelper.m in Sources */,
 				632FC28C20C777400083A946 /* AWSS3Resources.m in Sources */,
 				639F179020C7687D005E0FAB /* AWSS3Model.m in Sources */,
 				63A6EDA321E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.m in Sources */,
@@ -4524,6 +4535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6332327221E7962200DAB8CB /* AWSS3TransferUtility+HeaderHelper.m in Sources */,
 				63B82A602129C973002924AD /* AWSS3Resources.m in Sources */,
 				63B82A642129C973002924AD /* AWSS3TransferManager.m in Sources */,
 				63A6EDA421E6BC1A00A2A9CD /* AWSS3TransferUtilityTasks.m in Sources */,
