@@ -90,6 +90,7 @@
 @property (strong, nonatomic) NSString *bucket;
 @property (strong, nonatomic) NSString *key;
 @property (strong, nonatomic) NSString *transferID;
+@property (nullable, readwrite, nonatomic) NSString *ETag;
 @property AWSS3TransferUtilityTransferStatusType status;
 @property NSNumber *contentLength;
 @end
